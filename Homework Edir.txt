@@ -1,0 +1,25 @@
+
+
+1. MVC Pattern (Model-View-Controller)
+MVC (Model-View-Controller) proqramlaşdırma arxitekturasıdır, tətbiqetmələri üç əsas komponentə ayırır: Model, View və Controller. Bu arxitektura istifadəçi interfeysi, məlumat və iş loqikasının ayrılmasını təmin edir.
+
+Model: Tətbiqin məlumatlarını və iş qaydalarını idarə edir. Model tətbiqetmədəki məlumatları saxlayır və onları necə idarə edəcəyini müəyyən edir.
+View: Tətbiqin istifadəçi interfeysi hissəsidir. Modeldə olan məlumatları istifadəçiyə göstərir və istifadəçidən gələn girişi qəbul edir.
+Controller: İstifadəçi tələblərini qəbul edir, onları emal edir və uyğun olaraq model və view-i yeniləyir.
+2. Middleware
+Middleware proqram komponentləridir ki, tətbiqin bir hissəsindən digərinə keçən tələbləri emal edirlər. ASP.NET Core-da, Middleware tələbin gəlməsindən cavab göndərilənə qədər işini yerinə yetirir.
+
+Middleware istifadə edilərək tələblər manipulyasiya edilə bilər, autentifikasiya və avtorizasiya işləri aparıla bilər, loqlar yaza bilər və s.
+
+3. ASP.NET üzərində olan metodlar (Use, Run, Map, MapWhen)
+ASP.NET Core-da middleware-ləri konfiqurasiya etmək üçün Use, Run, Map və MapWhen metodlarından istifadə olunur.
+
+Use: Tələbin emal zəncirinə middleware əlavə edir. next deyə bir sonraki middleware çağırır.
+Run: Tələbi emal edən son middleware əlavə edir. next çağırmır, bu səbəbdən zəncir burada bitir.
+Map: Təyin olunmuş URL marşrutları üçün middleware konfiqurasiya edir.
+MapWhen: Dinamik olaraq müəyyən şərtlərə əsasən middleware konfiqurasiya edir.
+
+4. Dependency Inversion
+Dependency Inversion Principle (DIP), SOLID prinsipindən biridir və yüksək səviyyəli modulların aşağı səviyyəli modullara bağlı olmamasını təmin edir. Yəni, həm yüksək səviyyəli, həm də aşağı səviyyəli modullar abstraksiyalara bağlı olmalıdır. Abstraksiyalar konkretliyin təfərrüatlarına deyil, interfeyslərə və ya abstrakt siniflərə bağlı olmalıdır.
+
+ASP.NET Core-da bu prinsip dependency injection (DI) vasitəsilə təmin edilir. DI istifadə edərək tətbiqin fərqli hissələrində asanlıqla bağımlılıqları injekt etmək mümkündür.
